@@ -2,14 +2,19 @@
 #include <vector>
 
 void swapvec(std::vector<int>& vec, int* arr, int size) {
-    for (int i = 0; i < size; ++i) {
-        arr[i] = vec[i];
+    int temp = 0;
+    for (int i = 0; i < size; ++i) 
+    {
+        temp = vec[i];
+        vec[i] = arr[i];
+        arr[i] = temp;
     }
 }
 
 void inputData(std::vector<int>& array_a, int size)
 {
-    std::cout << "Enter thr data in the array A: ";
+    std::cout   << "Enter thr data in the vector A: "
+                << std::endl;
 
     for(int i = 0; i < size; i++)
     {
@@ -23,7 +28,8 @@ void inputData(std::vector<int>& array_a, int size)
 
 void inputData(int* array_b, int size)
 {
-    std::cout << "Enter thr data in the array B: ";
+    std::cout   << "Enter thr data in the array B: "
+                << std::endl;
 
     for(int i = 0; i < size; i++)
     {
@@ -37,16 +43,20 @@ void inputData(int* array_b, int size)
 
 void printResult(std::vector<int>& vec, int size) {
     std::cout << "Result vector: ";
-    for (int i = 0; i < size; ++i) {
-        std::cout << vec[i] << " ";
+    for (int i = 0; i < size; ++i) 
+    {
+        std::cout   << vec[i] 
+                    << " ";
     }
     std::cout << std::endl;
 }
 
 void printResult(int* arr, int size) {
     std::cout << "Result array: ";
-    for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+    for (int i = 0; i < size; ++i) 
+    {
+        std::cout   << arr[i] 
+                    << " ";
     }
     std::cout << std::endl;
 }
@@ -54,8 +64,9 @@ void printResult(int* arr, int size) {
 int main()
 {
     int size = 0;
-    std::cout << "Enter the size of array: ";
-    std::cin >> size;
+    std::cout   << "Enter the size of array: ";
+    std::cin    >> size;
+    std::cout   << std::endl;
 
     std::vector<int> array_a(size);
     int array_b[size];
