@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 
-void swapvec(std::vector<int>& vec, int* arr, int size) {
+void swapvec(std::vector<int>& vec, int* arr, int size) 
+{
     int temp = 0;
     for (int i = 0; i < size; ++i) 
     {
@@ -41,7 +42,8 @@ void inputData(int* array_b, int size)
     std::cout << std::endl;
 }
 
-void printResult(std::vector<int>& vec, int size) {
+void printResult(std::vector<int>& vec, int size) 
+{
     std::cout << "Result vector: ";
     for (int i = 0; i < size; ++i) 
     {
@@ -51,7 +53,8 @@ void printResult(std::vector<int>& vec, int size) {
     std::cout << std::endl;
 }
 
-void printResult(int* arr, int size) {
+void printResult(int* arr, int size) 
+{
     std::cout << "Result array: ";
     for (int i = 0; i < size; ++i) 
     {
